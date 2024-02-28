@@ -69,13 +69,13 @@ const CardCarousel: React.FC<CardCarouselProps> = ({
 
   return (
     <div
-      className="w-full px-2 pb-10 relative"
+      className="w-full pb-10 relative"
       style={{
         backgroundColor: '#0F1016FF',
       }}
     >
       <div
-        className="flex justify-between py-3 text-xl font-semibold text-white"
+        className="flex justify-between py-3 px-2 text-xl font-semibold text-white"
       >
         <div>
           {title}
@@ -104,22 +104,20 @@ const CardCarousel: React.FC<CardCarouselProps> = ({
           onMouseLeave={() => handleMouseHoverOnScrollButton(ScrollTo.Left, 'leave')}
           scrollTo={ScrollTo.Left}
         />
-        <div className="overflow-x-scroll hide-scrollbar">
-          <div
-            ref={viewAllRef}
-            className="flex gap-2"
-          >
-            {
-              items.map((card, index) => (
-                <Card
-                  key={index}
-                  description={card.description}
-                  categories={card.categories}
-                  previewImage={card.previewImage}
-                />
-              ))
-            }
-          </div>
+        <div
+          ref={viewAllRef}
+          className="flex gap-2 px-2 scrollbar-none scrollbar-smooth"
+        >
+          {
+            items.map((card, index) => (
+              <Card
+                key={index}
+                description={card.description}
+                categories={card.categories}
+                previewImage={card.previewImage}
+              />
+            ))
+          }
         </div>
       </div>
     </div>

@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, {
+  useState,
+} from 'react';
 import { Button } from '..';
 import { ButtonColor } from '../button/button.component';
 // import heartIcon from '../../assets/heart.svg';
@@ -18,9 +20,7 @@ const Card: React.FC<CardProps> = ({
   const [previewCardVisibility, setPreviewCardVisibility] = useState<DocumentVisibilityState>('hidden');
 
   const handleMouseEnter = () => {
-    setTimeout(() => {
-      setPreviewCardVisibility('visible');
-    }, 200);
+    setPreviewCardVisibility('visible');
   };
 
   const handleMouseLeave = () => {
@@ -32,13 +32,13 @@ const Card: React.FC<CardProps> = ({
       <div
         className='relative rounded-md cursor-pointer'
         onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
         style={{
           background: `url('${previewImage}')`,
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           height: '320px',
           minWidth: '240px',
-          overflow: 'visible',
         }}
       >
         <div
