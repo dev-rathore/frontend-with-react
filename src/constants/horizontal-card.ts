@@ -1,54 +1,54 @@
 import previewImage from '../assets/images/card-carousel-image.png';
 
-export const CARD_DATA = [
+export const HORIZONTAL_CARD_DATA = [
   {
-    categories: ["2023", "2h 54m", "Hindi", "A", "Action"],
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec dui eget nunc aliquam aliquet. Nulla nec dui eget nunc aliquam aliquet.",
     previewImage,
+    title: "Semi-Final 2: Panthers 27-31 Steelers"
   },
   {
-    categories: ["2023", "2h 54m", "Hindi", "A", "Action"],
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec dui eget nunc aliquam aliquet. Nulla nec dui eget nunc aliquam aliquet.",
     previewImage,
+    title: "Semi-Final 2: Panthers 27-31 Steelers"
   },
   {
-    categories: ["2023", "2h 54m", "Hindi", "A", "Action"],
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec dui eget nunc aliquam aliquet. Nulla nec dui eget nunc aliquam aliquet.",
     previewImage,
+    title: "Semi-Final 2: Panthers 27-31 Steelers"
   },
   {
-    categories: ["2023", "2h 54m", "Hindi", "A", "Action"],
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec dui eget nunc aliquam aliquet. Nulla nec dui eget nunc aliquam aliquet.",
     previewImage,
+    title: "Semi-Final 2: Panthers 27-31 Steelers"
   },
   {
-    categories: ["2023", "2h 54m", "Hindi", "A", "Action"],
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec dui eget nunc aliquam aliquet. Nulla nec dui eget nunc aliquam aliquet.",
     previewImage,
+    title: "Semi-Final 2: Panthers 27-31 Steelers"
   },
   {
-    categories: ["2023", "2h 54m", "Hindi", "A", "Action"],
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec dui eget nunc aliquam aliquet. Nulla nec dui eget nunc aliquam aliquet.",
     previewImage,
+    title: "Semi-Final 2: Panthers 27-31 Steelers"
   },
   {
-    categories: ["2023", "2h 54m", "Hindi", "A", "Action"],
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec dui eget nunc aliquam aliquet. Nulla nec dui eget nunc aliquam aliquet.",
     previewImage,
+    title: "Semi-Final 2: Panthers 27-31 Steelers"
   },
   {
-    categories: ["2023", "2h 54m", "Hindi", "A", "Action"],
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec dui eget nunc aliquam aliquet. Nulla nec dui eget nunc aliquam aliquet.",
     previewImage,
+    title: "Semi-Final 2: Panthers 27-31 Steelers"
   },
   {
-    categories: ["2023", "2h 54m", "Hindi", "A", "Action"],
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec dui eget nunc aliquam aliquet. Nulla nec dui eget nunc aliquam aliquet.",
     previewImage,
+    title: "Semi-Final 2: Panthers 27-31 Steelers"
   },
   {
-    categories: ["2023", "2h 54m", "Hindi", "A", "Action"],
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec dui eget nunc aliquam aliquet. Nulla nec dui eget nunc aliquam aliquet.",
     previewImage,
+    title: "Semi-Final 2: Panthers 27-31 Steelers"
   },
 ]

@@ -6,16 +6,17 @@ import { ButtonColor } from '../button/button.component';
 // import heartIcon from '../../assets/heart.svg';
 import CategoriesSection from './categories-section.component';
 
-type CardProps = {
+interface VerticalCardProps extends React.HTMLAttributes<HTMLDivElement>{
   categories: string[];
   description: string;
   previewImage: string;
 };
 
-const Card: React.FC<CardProps> = ({
+const VerticalCard: React.FC<VerticalCardProps> = ({
   categories,
   description,
   previewImage,
+  ...props
 }) => {
   const [previewCardVisibility, setPreviewCardVisibility] = useState<DocumentVisibilityState>('hidden');
 
@@ -30,6 +31,7 @@ const Card: React.FC<CardProps> = ({
   return (
     <>
       <div
+        {...props}
         className='relative rounded-md cursor-pointer'
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -52,13 +54,12 @@ const Card: React.FC<CardProps> = ({
             top: '50%',
             transform: `translate(-50%, -50%) scale(${previewCardVisibility === 'visible' ? 1 : 0.5})`,
             transition: 'transform 0.3s ease-in-out, opacity 0.3s ease-in-out',
-            zIndex: 4,
+            zIndex: 2,
           }}
         >
           <div
             className='relative'
             style={{
-              // backgroundColor: 'white',
               background: `url('${previewImage}')`,
               backgroundPosition: 'center',
               backgroundSize: 'cover',
@@ -101,4 +102,4 @@ const Card: React.FC<CardProps> = ({
   );
 }
 
-export default Card;
+export default VerticalCard;

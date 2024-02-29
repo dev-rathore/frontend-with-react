@@ -7,28 +7,39 @@ export enum ScrollTo {
 }
 
 interface ScrollButtonProps extends React.HTMLAttributes<HTMLDivElement> {
-  isScrolling: boolean;
+  isScrollable: boolean;
+  onInitialPosition?: boolean;
   scrollTo: string;
 };
 
 const ScrollButton: React.FC<ScrollButtonProps> = ({
-  isScrolling,
+  isScrollable,
+  onInitialPosition,
   scrollTo,
   ...props
 }) => {
   return (
     <div
       {...props}
-      className="absolute flex flex-col py-1 items-center cursor-pointer"
+      className={`
+        absolute
+        flex
+        flex-col
+        py-1
+        items-center
+        cursor-pointer
+        opacity-0
+        ${isScrollable ? 'hover:opacity-100' : ''}
+        ${isScrollable && onInitialPosition ? 'opacity-100' : ''}
+      `}
       style={{
         background: `linear-gradient(${scrollTo === ScrollTo.Left ? '90deg' : '-90deg'}, rgba(22, 24, 31, 0) 0%, #0F1016 100%)`,
-        height: '100%',
+        height: '90%',
         left: scrollTo === ScrollTo.Right? 0 : undefined,
         right: scrollTo === ScrollTo.Left? 0 : undefined,
-        top: 0,
+        top: '10%',
         width: '60px',
-        zIndex: 2,
-        opacity: isScrolling ? 1 : 0,
+        zIndex: 4,
         transition: 'opacity 0.3s ease-in-out',
       }}
     >
