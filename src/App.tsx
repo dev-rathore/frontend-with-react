@@ -2,13 +2,15 @@ import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 
 import './App.css'
 import {
-  CardCarousel, Experiment, Random,
+  CardCarousel,
+  CustomizedVideoPlayer,
+  Experiment,
+  Random,
 } from './components';
 import { VERTICAL_CARD_DATA } from './constants/vertical-card';
 import { CarouselType } from './components/types/card';
 import { HORIZONTAL_CARD_DATA } from './constants/horizontal-card';
 import { TERTIARY_CARD_DATA } from './constants/tertiary-card';
-
 
 const App: React.FC = () => {
   return (
@@ -49,6 +51,12 @@ const App: React.FC = () => {
           path='/experiment'
           element={
             <Experiment />
+          }
+        />
+        <Route
+          path='/customised-video-player'
+          element={
+            <CustomizedVideoPlayer />
           }
         />
       </Routes>
