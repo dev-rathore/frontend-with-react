@@ -7,7 +7,7 @@ interface HorizontalCardProps extends React.HTMLAttributes<HTMLDivElement>{
   description: string;
   previewImage: string;
   title: string;
-};
+}
 
 const HorizontalCard: React.FC<HorizontalCardProps> = ({
   description,

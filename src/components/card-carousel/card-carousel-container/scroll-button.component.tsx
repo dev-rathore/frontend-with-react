@@ -10,7 +10,7 @@ interface ScrollButtonProps extends React.HTMLAttributes<HTMLDivElement> {
   isScrollable: boolean;
   onInitialPosition?: boolean;
   scrollTo: string;
-};
+}
 
 const ScrollButton: React.FC<ScrollButtonProps> = ({
   isScrollable,

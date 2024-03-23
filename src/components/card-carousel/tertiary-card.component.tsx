@@ -10,7 +10,7 @@ interface TertiaryCardProps extends React.HTMLAttributes<HTMLDivElement>{
   timeLeft: string;
   title: string;
   viewMoreUrl: string;
-};
+}
 
 const TertiaryCard: React.FC<TertiaryCardProps> = ({
   previewImage,

@@ -21,4 +21,4 @@ export enum CarouselType {
   HORIZONTAL = 'horizontal',
   TERTIARY = 'tertiary',
   VERTICAL = 'vertical',
-};
+}

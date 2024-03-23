@@ -10,7 +10,7 @@ interface VerticalCardProps extends React.HTMLAttributes<HTMLDivElement>{
   categories: string[];
   description: string;
   previewImage: string;
-};
+}
 
 const VerticalCard: React.FC<VerticalCardProps> = ({
   categories,
