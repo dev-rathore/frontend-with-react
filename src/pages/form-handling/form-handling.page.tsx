@@ -18,6 +18,7 @@ import {
   usernameSchema,
 } from "../../constants/form-handling";
 import { ButtonColor, ButtonVariant } from "../../components/button/button.component";
+import toast from "react-hot-toast";
 
 const FormHandling: React.FC = () => {
   const [theme, setTheme] = useState(ThemeLook.LIGHT);
@@ -66,7 +67,7 @@ const FormHandling: React.FC = () => {
     onSubmit: async (values) => {
       try {
         setLoading(true);
-        const apiResponse = new Promise((
+        const formSubmission = new Promise((
           resolve,
         ) => {
           let response = '';
@@ -75,9 +76,11 @@ const FormHandling: React.FC = () => {
             resolve(response);
           }, 5000);
         });
-        await apiResponse;
-        console.log(apiResponse);
-        console.log(values);
+        const formResponse = await formSubmission;
+        if (formResponse) {
+          toast.success(formResponse as string);
+          console.log(values);
+        }
       } catch (e) {
         console.log(e);
       } finally {
@@ -212,15 +215,18 @@ const FormHandling: React.FC = () => {
           type="password"
           value={formik.values.password}
         />
-        <Button
-          color={ButtonColor.PRIMARY}
-          disabled={loading}
-          isLoading={loading}
-          type="submit"
-          variant={ButtonVariant.SOLID}
-        >
-          Submit
-        </Button>
+        <div className="mt-5">
+          <Button
+            color={ButtonColor.PRIMARY}
+            disabled={loading}
+            fullWidth
+            isLoading={loading}
+            type="submit"
+            variant={ButtonVariant.SOLID}
+          >
+            Submit
+          </Button>
+        </div>
       </form>
     </div>
   );
