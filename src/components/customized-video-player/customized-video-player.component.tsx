@@ -76,7 +76,7 @@ const CustomizedVideoPlayer: React.FC = () => {
 
   return (
     <div
-      className="min-h-screen flex flex-col"
+      className="bg-black text-white min-h-screen flex flex-col"
       onMouseMove={handleControlsVisibilityOnMouseMove}
     >
       <h1
@@ -161,7 +161,6 @@ const CustomizedVideoPlayer: React.FC = () => {
             -translate-x-1/2
             -translate-y-1/2
             text-5xl
-            text-white
             cursor-pointer
           `}
         >
