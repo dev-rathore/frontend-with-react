@@ -76,11 +76,11 @@ const VerticalCard: React.FC<VerticalCardProps> = ({
           <div className="p-3 pt-1 text-white">
             <div className="flex gap-2">
               <div className='grow'>
-                <Button fullWidth>Watch Now</Button>
+                <Button fullWidth color={ButtonColor.DISNEY_PLUS_HOTSTAR_PRIMARY}>Watch Now</Button>
               </div>
               <div className="flex-none">
                 <Button
-                  color={ButtonColor.Secondary}
+                  color={ButtonColor.DISNEY_PLUS_HOTSTAR_SECONDARY}
                 >
                   {/* <img src={heartIcon} alt="heart" /> */}
                   +

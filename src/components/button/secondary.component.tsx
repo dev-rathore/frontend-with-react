@@ -8,10 +8,10 @@ const SecondaryButton: React.FC<PropsWithChildren<ButtonProps>> = ({
   const fullWidthClass = props.fullWidth ? "w-full" : "";
 
   switch (props.variant) {
-    case ButtonVariant.Outline:
+    case ButtonVariant.OUTLINE:
       return (
         <button
-          className={`${fullWidthClass} py-3 px-5 font-semibold rounded-md hover:scale-105 border border-slate-200 text-slate-900`}
+          className={`${fullWidthClass} py-3 px-5 font-semibold rounded-md border border-slate-200 text-slate-900`}
           style={{
             transition: 'transform 0.3s ease-in-out',
           }}
@@ -23,9 +23,10 @@ const SecondaryButton: React.FC<PropsWithChildren<ButtonProps>> = ({
     default:
       return (
         <button
-          className={`${fullWidthClass} py-3 px-5 font-semibold rounded-md hover:scale-105 text-white`}
+          className={`${fullWidthClass} py-3 px-5 font-semibold rounded-md`}
           style={{
-            backgroundColor: '#282A30',
+            backgroundColor: '#E1E6F0',
+            color: '#1E2023',
             transition: 'transform 0.3s ease-in-out',
           }}
           {...props}
