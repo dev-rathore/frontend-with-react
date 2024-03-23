@@ -6,6 +6,19 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "importHelpers": false,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "strictNullChecks": false,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
