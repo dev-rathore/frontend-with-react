@@ -9,7 +9,6 @@ export const AppRoutes = () => {
   }
 
   const routes = isUserAuthenticated() ? protectedRoutes : publicRoutes;
-console.log(routes);
 
   const element = useRoutes([...routes, ...publicRoutes]);
 

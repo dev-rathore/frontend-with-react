@@ -3,8 +3,6 @@ import { ErrorBlock } from "../../components";
 import { routes } from "../../routes/routes";
 
 const Four0Four: React.FC = () => {
-  console.log('Four0Four');
-  
   return (
     <ErrorBlock
       cta={{
