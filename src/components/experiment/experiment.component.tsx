@@ -51,7 +51,6 @@ const Experiment: React.FC = () => {
               cursor-pointer
               border-2
               border-blue-700
-              cursor-pointer
             "
           />
         ))}

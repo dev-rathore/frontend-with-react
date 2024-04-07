@@ -8,6 +8,7 @@ import {
   OtpVerificationPage,
   SignupPage,
   UIImplementationsPage,
+  UnderstandingReact,
 } from '../pages';
 import {
   CustomizedVideoPlayer,
@@ -67,6 +68,10 @@ export const publicRoutes = [
   {
     path: routes.RANDOM_TESTING,
     element: <Random />,
+  },
+  {
+    path: routes.UNDERSTANDING_REACT,
+    element: <UnderstandingReact />,
   },
   {
     path: '*',

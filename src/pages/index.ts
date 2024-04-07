@@ -9,6 +9,7 @@ import OtpLoginPage from "./authentication/otp-login/otp-login.page";
 import OtpVerificationPage from "./authentication/otp-verification/otp-verification.page";
 import SignupPage from "./authentication/signup/signup.page";
 import UIImplementationsPage from "./ui-implementations/ui-implementations.page";
+import UnderstandingReact from "./understanding-react/understanding-react.page";
 
 export {
   AppLayout,
@@ -22,4 +23,5 @@ export {
   OtpVerificationPage,
   SignupPage,
   UIImplementationsPage,
+  UnderstandingReact,
 }

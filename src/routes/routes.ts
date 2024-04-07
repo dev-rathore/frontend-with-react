@@ -14,6 +14,7 @@ const publicRoutes = {
   OTP_VERIFICATION_PAGE: 'otp-verification',
   SIGNUP: 'signup',
   UI_IMPLEMENTATION: 'ui-implementations',
+  UNDERSTANDING_REACT: 'understanding-react',
 };
 
 const protectedRoutes = {
