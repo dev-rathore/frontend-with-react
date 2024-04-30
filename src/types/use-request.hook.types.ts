@@ -5,18 +5,18 @@ export interface AsyncError {
   message: string;
 }
 
-export interface AsyncOperationResult<T> {
-  error?: AsyncError;
+export interface RequestResult<T> {
   data?: T;
+  error?: AsyncError;
 }
 
-export interface UseAsyncOperationResponse<T> extends AsyncOperationResult<T> {
-  result: T;
-  asyncCallback: (...args: unknown[]) => Promise<T>;
+export interface RequestResponse<T> extends RequestResult<T> {
   isLoading: boolean;
+  requestCallback: (...args: unknown[]) => Promise<T>;
+  result: T;
 }
 
-export class AsyncOperationError implements AsyncError {
+export class RequestError implements AsyncError {
   code: string;
   message: string;
 

@@ -2,19 +2,19 @@ import { useCallback, useState } from 'react';
 
 import {
   AsyncError,
-  AsyncOperationError,
-  AsyncOperationResult,
-  UseAsyncOperationResponse,
-} from '../types/async-operation';
+  RequestError,
+  RequestResponse,
+  RequestResult,
+} from '../types/use-request.hook.types';
 
-const useAsyncOperation = <T>(
-  asyncFn: (...args: unknown[]) => Promise<AsyncOperationResult<T>>,
-): UseAsyncOperationResponse<T> => {
+const useRequest = <T>(
+  asyncFn: (...args: unknown[]) => Promise<RequestResult<T>>,
+): RequestResponse<T> => {
   const [result, setResult] = useState<T | undefined>(undefined);
   const [isLoading, setLoading] = useState(false);
   const [error, setError] = useState<AsyncError | undefined>(undefined);
 
-  const asyncCallback = useCallback(
+  const requestCallback = useCallback(
     async (...args: unknown[]) => {
       setError(undefined);
       setLoading(true);
@@ -27,7 +27,7 @@ const useAsyncOperation = <T>(
 
         return response?.data;
       } catch (e: any) {
-        const err = new AsyncOperationError({
+        const err = new RequestError({
           code: e?.response?.data?.code || e.code,
           message: e?.response?.data?.message || e.message,
         });
@@ -42,11 +42,11 @@ const useAsyncOperation = <T>(
   );
 
   return {
-    asyncCallback,
     error,
     isLoading,
+    requestCallback,
     result,
   };
 };
 
-export default useAsyncOperation;
+export default useRequest;

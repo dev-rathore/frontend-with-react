@@ -4,7 +4,11 @@ export default class AppService {
   appHost: string;
 
   constructor() {
-    this.appHost = `${window.location.protocol}//${window.location.host}`;
+    if (process.env.PROD_SERVER_URL) {
+      this.appHost = process.env.PROD_SERVER_URL;
+    } else {
+      this.appHost = `${window.location.protocol}//${window.location.host}`;
+    }
   }
 
   static getAxiosInstance(config?: CreateAxiosDefaults): AxiosInstance {

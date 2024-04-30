@@ -1,5 +1,5 @@
 import { JsonObject } from '.';
-import { AsyncError, AsyncOperationResult } from './async-operation';
+import { AsyncError, RequestResult } from './use-request.hook.types';
 
 export class ApiError implements AsyncError {
   code: string;
@@ -13,7 +13,7 @@ export class ApiError implements AsyncError {
   }
 }
 
-export class ApiResponse<T> implements AsyncOperationResult<T> {
+export class ApiResponse<T> implements RequestResult<T> {
   data?: T;
   error?: ApiError;
 
